@@ -6,6 +6,8 @@ use GuzzleHttp\Client;
 
 //Good idea would be to have all this separated in different files, 
 //but for demonstration purposes, I will keep all stuff in one place
+
+
 //Set up a database connection.
 $config = [
     'connection' => 'mysql',
@@ -35,7 +37,7 @@ $client = new Client(['base_uri' => 'https://api.outbrain.com/amplify/v0.1/']);
 
 $apiUsername = '';
 $apiPassword = '';
-$credentials = base64_encode("{$username}:{$password}");
+$credentials = base64_encode("{$apiUsername}:{$apiPassword}");
 
 $startdate = '2015-12-22';
 $enddate = date('Y-m-d', strtotime($startdate . ' +1 day'));
